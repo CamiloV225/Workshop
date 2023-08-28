@@ -1,5 +1,6 @@
 # Workshop
 ### Summary
-This Gith contains the development of the first workshop of ETL, here you will find the results of the analisys of the candidates.csv dataset that contains the information about the interviews and skills of each person that applies for a job, you will also find in a Jupyter Notebook the queries for a SQL database made with postgres, with their respective description and graphics for a easier analisys.
+This Git repository hosts the initial development stage of my ETL workshop. Here, you'll discover the outcomes of my analysis performed on the candidates.csv dataset. This dataset contains valuable information about interviewees, encompassing their skill sets and interview details for various job applications.
 
-Primarly this workshop would be use for the class of ETL to practice the topics that we saw
+Moreover, i've included a Jupyter Notebook that contains SQL queries designed for interaction with a PostgreSQL database. These queries have been thoughtfully crafted to retrieve specific insights and information from the database. To make things even more user-friendly, i've provided clear explanations alongside the queries, ensuring a smoother grasp of their purpose and functionality.
+
