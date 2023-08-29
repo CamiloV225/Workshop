@@ -12,13 +12,18 @@ Data visualization:
 This section uses visualizations to communicate the results of the data analysis. The visualizations are created using Python and the Matplotlib library.
 ## Tools Used
 Database: PostgreSQL
-Data analysis: SQL
+
+Data analysis language: SQL
+
 Data visualization: Python, Matplotlib
 ## How to Use This Repository
 To use this repository, you will need to have the following software installed:
 PostgreSQL
+
 Python
+
 Jupyter Notebook
+
 Once you have the necessary software installed, you can clone the repository to your local machine. Then, open the Jupyter Notebook in the data-analysis directory. The notebook contains all of the SQL queries and visualizations for the workshop.
 
 I hope this is what you are looking for. Let me know if you have any other questions.
