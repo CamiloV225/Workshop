@@ -34,7 +34,7 @@ To use this repository, first you will need to have the following software insta
 
 Then you will need to download the repository and install the libraries needed to run the code:
 
-1. You can clone the repository with this command: `git clone https://github.com/VinkeArtunduaga/workshop_01.git`
+1. You can clone the repository with this command: `https://github.com/CamiloV225/Workshop`
 2. After that, you can install the following libraries that we will need to run the code:
    - Psycopg2: is the library that allows us to connect our code with Postgres, here you need to use the credentials in order to access the database.
    - Pandas: it will be useful to create a dataframe for easy management.
