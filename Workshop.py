@@ -1,12 +1,16 @@
 import psycopg2
 import matplotlib.pyplot as plt
 import pandas as pd
+import json
 
 def connect_postgres():
+    with open('C:/Users/camil/OneDrive/Documents/GitHub/Workshop/db_config.json') as f:
+        dbfile = json.load(f)
+         
     connection = psycopg2.connect(
-        database="Taller",
-        user="postgres",
-        password="Ronny1212",
+        database=dbfile["database"],
+        user=dbfile["user"],
+        password=dbfile["password"],
         host="localhost",
         port=5432
     )
@@ -50,6 +54,7 @@ def Query1():
     cursor = connection.cursor()
     cursor.execute("SELECT technology, COUNT(*) AS resultado_tech FROM candidates WHERE code_challenge_score >= 7 AND technical_interview_score >=7 GROUP BY technology")
     results = cursor.fetchall()
+    print(results)
     tecnologies = []
     for row in results:
         tecnologies.append(row)
@@ -57,7 +62,7 @@ def Query1():
     departments = [tupla[0] for tupla in tecnologies]
     employees = [tupla[1] for tupla in tecnologies]
 
-    plt.pie(employees, labels=departments)
+    plt.pie(employees, labels=departments, autopct="%.1f%%")
     plt.title("Employee Count by Department")
     plt.show()
 
@@ -67,6 +72,7 @@ def Query2():
     cursor = connection.cursor()
     cursor.execute("SELECT EXTRACT(year FROM application_date) AS year, COUNT(application_date) AS conteo FROM candidates WHERE code_challenge_score >= 7 AND technical_interview_score >=7 GROUP BY year")
     results = cursor.fetchall()
+    print(results)
     year = []
     for row in results:
         year.append(row)
@@ -76,6 +82,8 @@ def Query2():
     employees = [tupla[1] for tupla in year]
     colors = ["#09607d", "#2b3266", "#1d7d72","#1d7d72","#3f1d7d"]
     plt.barh(years,employees, color = colors)
+    for i, v in enumerate(employees):
+        plt.text(v, i, str(v), ha='center')
     plt.title("Employee Count by year")
     plt.show()
 
@@ -84,6 +92,7 @@ def Query3():
     cursor = connection.cursor()
     cursor.execute("SELECT seniority, COUNT(seniority) AS resultado_seniority FROM candidates WHERE code_challenge_score >= 7 AND technical_interview_score >=7 GROUP BY seniority")
     results = cursor.fetchall()
+    print(results)
     seniorits = []
     for row in results:
         seniorits.append(row)
@@ -110,6 +119,7 @@ def Query4():
         ORDER BY year
     """)
     results = cursor.fetchall()
+    print(results)
     countries =[]
     for row in results:
         countries.append(row)
@@ -131,6 +141,5 @@ def Query4():
 
 if __name__ == "__main__":
     connection = connect_postgres()
-
     Query4()
 
