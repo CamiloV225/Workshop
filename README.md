@@ -4,6 +4,19 @@
 
 This repository contains the development and analysis performed on the `candidates.csv` dataset. The dataset contains valuable information about interviewees, encompassing their skill sets and interview details for various job applications. This workshop evaluates your data management skills and your ability to create meaningful visualizations.
 
+This is a small overview of the columns and their data type:
+- first_name: varchar
+- last_name: varchar
+- email: varchar
+- application_date: date default current_date
+- country: varchar
+- yoe: integer
+- seniority: varchar
+- technology: varchar
+- code_challenge_score: integer
+- technical_interview_score: integer
+
+
 ## Tools Used
 
 - **Database:** PostgreSQL
