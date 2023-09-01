@@ -4,20 +4,6 @@
 
 This repository contains the development and analysis performed on the `candidates.csv` dataset. The dataset contains valuable information about interviewees, encompassing their skill sets and interview details for various job applications. This workshop evaluates your data management skills and your ability to create meaningful visualizations.
 
-The workshop is divided into the following sections:
-
-### Data Exploration
-
-This section explores the dataset to get a better understanding of the data. This includes descriptive statistics, data cleaning, and data wrangling.
-
-### Data Analysis
-
-This section uses SQL queries to analyze the data and answer specific questions. The queries are documented in a Jupyter Notebook, which also provides clear explanations of the results.
-
-### Data Visualization
-
-This section uses visualizations to communicate the results of the data analysis. The visualizations are created using Python and the Matplotlib library.
-
 ## Tools Used
 
 - **Database:** PostgreSQL
